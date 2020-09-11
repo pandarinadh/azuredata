@@ -1,0 +1,40 @@
+Imp Note about this Demo
+Few students have mentioned that they are not able to create Databricks cluster using a Free subscription trial. They are getting errors like
+
+"A cloud provider error was encountered while setting up the cluster. "
+
+"Operation could not be completed as it results in exceeding approved Total Regional Cores quota."
+
+
+
+Unfortunately, I am not able to replicate this issue because my free tried has expired long back.
+
+Alternate Solution
+
+You can use the community edition of Databricks which is free and works fine.
+
+https://community.cloud.databricks.com/
+
+Solution for Error
+
+However one of the students has also figured out how to resolve the above issue. Please find his comment below.
+
+----------------------------------------------------------------------------------------------------------------------
+
+Saikat Sengupta
+
+I resolved this issue yesterday. You can follow the below steps and check if this works for you.
+
+1. Your databricks cluster will not work with Azure Free Trial Subscription. Refer the link below. https://docs.microsoft.com/en-us/azure/databricks/scenarios/quickstart-create-databricks-workspace-portal#create-a-spark-cluster-in-databricks
+
+2. You need to upgrade your account to pay-as-you-go. This takes approx 15 mins to reflect with your account settings.
+
+3. Delete the workspace you created earlier.
+
+4. Create a new databricks standard workspace, not the trial 14 days one
+
+5. Configure your cluster with minimal resources to cut down the cost. Say min. worker nodes: 1 and max worker nodes:2 (Standard_DS3_v2)
+
+6. Driver node same as worker. So bare minimum you are requesting 8 cores (4 for driver and 4 for worker)
+
+7. Spin up your cluster. This should work now.

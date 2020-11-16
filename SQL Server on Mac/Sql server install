@@ -29,3 +29,10 @@ to stop
 docker stop <enter guid> from docker ps -a
 
 docker stop Homer
+
+
+
+https://www.quackit.com/sql_server/mac/how_to_restore_a_bak_file_using_azure_data_studio.cfm
+
+https://www.quackit.com/sql_server/mac/how_to_copy_a_file_from_the_host_to_a_docker_container.cfm
+

@@ -1,0 +1,31 @@
+Pull the SQL Server Image
+docker pull microsoft/mssql-server-linux
+
+Launch the SQL Server Image
+docker run -d --name Homer -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=myPassw0rd' -p 1433:1433 microsoft/mssql-server-linux
+
+Check the Docker container (optional)
+docker ps
+
+docker ps -a
+
+
+Connect to SQL Server
+Enter the SQL Server connection details.
+
+Here are the details I used on the SQL Server installation tutorial:
+
+Server Name: localhost
+Authentication Type: SQL Login
+User name: sa
+Password: myPassw0rd
+Database Name: <default>
+Server Group: <default>
+
+docker start Homer
+
+
+to stop 
+docker stop <enter guid> from docker ps -a
+
+docker stop Homer
